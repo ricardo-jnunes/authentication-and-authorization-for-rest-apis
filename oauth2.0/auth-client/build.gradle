@@ -6,14 +6,17 @@ plugins {
 
 group = 'com.auth.client'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '21'
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+}
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.3'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
