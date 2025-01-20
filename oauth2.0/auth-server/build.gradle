@@ -6,7 +6,9 @@ plugins {
 
 group = 'com.auth.server'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '21'
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+}
 
 repositories {
 	mavenCentral()
