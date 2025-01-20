@@ -1,6 +1,6 @@
 package com.auth.client.dto;
 
-public class LoginDTO {
+public class BasicLoginDTO {
 
 	private String username;
 	private String password;
