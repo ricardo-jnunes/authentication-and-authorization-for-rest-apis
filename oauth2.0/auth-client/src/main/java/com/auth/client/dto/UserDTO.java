@@ -39,31 +39,4 @@ public class UserDTO {
 		this.permissions = permissions;
 	}
 
-	public static UserDTO build(Long idParam, String nameParam) {
-		UserDTO user = new UserDTO();
-		user.setId(idParam);
-		user.setName(nameParam);
-		return user;
-	}
-
-	public static List<UserDTO> build() {
-		List<UserDTO> users = new ArrayList<UserDTO>();
-		for (long i = 0; i < 5; i++) {
-			UserDTO user = new UserDTO();
-			user.setId(i);
-			user.setName("User_" + i);
-
-			List<Permission> permissions = new ArrayList<Permission>();
-			if (i % 2 == 0) {
-				permissions.add(Permission.READ);
-				permissions.add(Permission.WRITE);
-				user.setPermissions(permissions);
-			} else {
-				permissions.add(Permission.READ);
-				user.setPermissions(permissions);
-			}
-			users.add(user);
-		}
-		return users;
-	}
 }
