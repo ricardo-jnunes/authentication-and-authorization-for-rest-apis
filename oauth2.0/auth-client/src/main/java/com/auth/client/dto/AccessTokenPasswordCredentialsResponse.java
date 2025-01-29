@@ -2,7 +2,7 @@ package com.auth.client.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 
-public class AccessTokenResponse {
+public class AccessTokenPasswordCredentialsResponse {
 
 	@JsonAlias("access_token")
 	private String accessToken;
@@ -11,7 +11,7 @@ public class AccessTokenResponse {
 	private String tokenType;
 
 	@JsonAlias("expires_in")
-	private String expiresIn;
+	private int expiresIn;
 
 	@JsonAlias("refresh_token")
 	private String refreshToken;
@@ -35,11 +35,11 @@ public class AccessTokenResponse {
 		this.tokenType = tokenType;
 	}
 
-	public String getExpiresIn() {
+	public int getExpiresIn() {
 		return expiresIn;
 	}
 
-	public void setExpiresIn(String expiresIn) {
+	public void setExpiresIn(int expiresIn) {
 		this.expiresIn = expiresIn;
 	}
 
