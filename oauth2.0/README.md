@@ -29,7 +29,7 @@ An application making protected resource requests on behalf of the resource owne
 ##### authorization server
 The server issuing access tokens to the client after successfully authenticating the resource owner and obtaining authorization.
 
-### OAuth 2.0 Flow
+### Abstract OAuth 2.0 Flow
      +--------+                               +---------------+
      |        |--(A)- Authorization Request ->|   Resource    |
      |        |                               |     Owner     |
@@ -49,6 +49,25 @@ The server issuing access tokens to the client after successfully authenticating
      +--------+                               +---------------+
 
 
+#### Resource Owner Password Credentials Grant
+     +----------+
+     | Resource |
+     |  Owner   |
+     |          |
+     +----------+
+          v
+          |    Resource Owner
+         (A) Password Credentials
+          |
+          v
+     +---------+                                  +---------------+
+     |         |>--(B)---- Resource Owner ------->|               |
+     |         |         Password Credentials     | Authorization |
+     | Client  |                                  |     Server    |
+     |         |<--(C)---- Access Token ---------<|               |
+     |         |    (w/ Optional Refresh Token)   |               |
+     +---------+                                  +---------------+
+     
 
 #### References
 https://datatracker.ietf.org/doc/html/rfc6749

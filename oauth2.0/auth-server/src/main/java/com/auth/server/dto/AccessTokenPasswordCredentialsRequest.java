@@ -17,12 +17,6 @@ public class AccessTokenPasswordCredentialsRequest {
 	@JsonAlias("password")
 	private String password;
 
-	@JsonAlias("client_id")
-	private String clientId;
-
-	@JsonAlias("client_secret")
-	private String clientSecret;
-
 	@JsonAlias("scope")
 	private String scope;
 
@@ -48,22 +42,6 @@ public class AccessTokenPasswordCredentialsRequest {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getClientId() {
-		return clientId;
-	}
-
-	public void setClientId(String clientId) {
-		this.clientId = clientId;
-	}
-
-	public String getClientSecret() {
-		return clientSecret;
-	}
-
-	public void setClientSecret(String clientSecret) {
-		this.clientSecret = clientSecret;
 	}
 
 	public String getScope() {

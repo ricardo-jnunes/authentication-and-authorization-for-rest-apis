@@ -1,6 +1,16 @@
 # authentication-for-rest-apis
 Case study for authentication and authorization for REST APIs.
 
+### Estudos implementados
+
+##### Tecnologias
+- SpringBoot
+
+#### OAuth 2.0
+##### Password-based Authentication
+Under construction
+
+
 ### Definições do ponto de vista dos implementadores
 A autenticação é um processo para determinar o indivíduo (= identificador exclusivo) de um usuário final. Há muitas maneiras de determinar o assunto. ID e senha, impressões digitais, reconhecimento de íris, etc.
 

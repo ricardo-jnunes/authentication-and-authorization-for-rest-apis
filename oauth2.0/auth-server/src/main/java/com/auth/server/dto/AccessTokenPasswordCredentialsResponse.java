@@ -16,9 +16,6 @@ public class AccessTokenPasswordCredentialsResponse {
 	@JsonAlias("refresh_token")
 	private String refreshToken;
 
-	@JsonAlias("scope")
-	private String scope;
-
 	public String getAccessToken() {
 		return accessToken;
 	}
@@ -50,13 +47,4 @@ public class AccessTokenPasswordCredentialsResponse {
 	public void setRefreshToken(String refreshToken) {
 		this.refreshToken = refreshToken;
 	}
-
-	public String getScope() {
-		return scope;
-	}
-
-	public void setScope(String scope) {
-		this.scope = scope;
-	}
-
 }
