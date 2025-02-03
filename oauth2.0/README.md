@@ -68,8 +68,13 @@ The server issuing access tokens to the client after successfully authenticating
      |         |    (w/ Optional Refresh Token)   |               |
      +---------+                                  +---------------+
      
+#### Access Tokens
+The format for OAuth 2.0 Bearer tokens is actually described in a separate spec, RFC 6750. There is no defined structure for the token required by the spec, so you can generate a string and implement tokens however you want.
 
+#### TODOs
+- Error responses
+ 
 #### References
 https://datatracker.ietf.org/doc/html/rfc6749
-
+https://datatracker.ietf.org/doc/html/rfc6750
 	
