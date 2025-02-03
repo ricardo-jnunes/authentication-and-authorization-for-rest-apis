@@ -71,10 +71,14 @@ The server issuing access tokens to the client after successfully authenticating
 #### Access Tokens
 The format for OAuth 2.0 Bearer tokens is actually described in a separate spec, RFC 6750. There is no defined structure for the token required by the spec, so you can generate a string and implement tokens however you want.
 
+Self-encoded tokens provide a way to avoid storing tokens in a database by encoding all of the necessary information in the token string itself. The main benefit of this is that API servers are able to verify access tokens without doing a database lookup on every API request, making the API much more easily scalable.
+RFC 9068 defines a standard way to use JWTs as access tokens.
+
 #### TODOs
 - Error responses
- 
+- JWT
+
 #### References
 https://datatracker.ietf.org/doc/html/rfc6749
 https://datatracker.ietf.org/doc/html/rfc6750
-	
+https://datatracker.ietf.org/doc/html/rfc9068
