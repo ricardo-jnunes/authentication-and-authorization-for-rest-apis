@@ -28,7 +28,7 @@ public class MockClientsGenerateServices {
 		client1.setAccessToken("1234");
 		client1.setExpiresIn(3600);
 		client1.setTokenType("password");
-		client1.setScope("read,write");
+		client1.setScope("read write");
 		clientRepository.save(client1);
 
 	}

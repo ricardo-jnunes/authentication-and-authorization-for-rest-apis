@@ -1,6 +1,6 @@
 package com.auth.client.contants;
 
-public enum Permission {
+public enum Scope {
 
 	NONE,
 	READ,

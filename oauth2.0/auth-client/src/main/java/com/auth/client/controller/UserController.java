@@ -1,7 +1,10 @@
 package com.auth.client.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.auth.client.dto.AccessTokenPasswordCredentialsRequest;
 import com.auth.client.dto.AccessTokenPasswordCredentialsResponse;
+import com.auth.client.dto.ProductDTO;
 import com.auth.client.services.UserServices;
 
 @RestController
@@ -30,6 +34,11 @@ public class UserController {
 		request.setPassword(password);
 		request.setScope(password);
 		return userServices.authorizeWithPasswordCredentials(request);
+	}
+
+	@GetMapping("/products")
+	public List<ProductDTO> listProducts(@RequestParam(name = "accessToken", required = true) String accessToken) {
+		return userServices.listProducts(accessToken);
 	}
 
 }
