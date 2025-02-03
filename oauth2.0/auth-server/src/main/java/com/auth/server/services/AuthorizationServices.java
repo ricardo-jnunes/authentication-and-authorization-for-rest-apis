@@ -19,7 +19,7 @@ public class AuthorizationServices {
 	public AccessTokenPasswordCredentialsResponse authorizeWithPasswordCredentials(
 			AccessTokenPasswordCredentialsRequest request) {
 
-		Optional<ClientEntity> clientEntityOpt = Optional.of(clientRepository.findByUsername(request.getUsername()));
+		Optional<ClientEntity> clientEntityOpt = Optional.ofNullable(clientRepository.findByUsername(request.getUsername()));
 
 		AccessTokenPasswordCredentialsResponse response = new AccessTokenPasswordCredentialsResponse();
 		if (clientEntityOpt.isPresent()) {
